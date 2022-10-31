@@ -9,7 +9,7 @@ class dovecot(
     'Redhat' => ['dovecot',]
   }
 
-  ensure_packages([$mailpackages], { 'configfiles' => $package_configfiles })
+  ensure_packages($mailpackages, { 'configfiles' => $package_configfiles })
 
   exec { 'dovecot':
     command     => 'echo "dovecot packages are installed"',
